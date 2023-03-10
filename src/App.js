@@ -1,10 +1,23 @@
 import React from 'react';
+import Layout from './components/Layout';
+import RandomCocktails from './components/RandomCocktails';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from 'react-router-dom';
+import './index.css';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Cocktail Connaisseur</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<RandomCocktails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
