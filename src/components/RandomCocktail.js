@@ -24,7 +24,8 @@ const RandomCocktail = () => {
 
   return (
     <div className='random--container'>
-      <h2>Try A Random Cocktail</h2>
+      <h2 onClick={() => window.location.reload()}>Try A Random Cocktail</h2>
+
       <Link
         to={`/cocktails/details/${randomCocktail.idDrink}`}
         state={{ cocktail: randomCocktail }}
