@@ -1,8 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 
 const CocktailDetails = () => {
   const cocktail = useLocation().state.cocktail;
+  const navigate = useNavigate();
 
   const ingredientsArray = [];
   const measurementsArray = [];
@@ -73,6 +74,9 @@ const CocktailDetails = () => {
       <ul className='details--list'>{ingredientsElements}</ul>
       <h3 className='details--subheading'>Instructions: </h3>
       <ul className='details--list'>{instructionsElements}</ul>
+      <button className='details--button' onClick={() => navigate(-1)}>
+        Go Back
+      </button>
     </div>
   );
 };
