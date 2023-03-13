@@ -1,23 +1,21 @@
 import React from 'react';
 import Layout from './components/Layout';
-import RandomCocktails from './components/RandomCocktails';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from 'react-router-dom';
+import CocktailsNav from './components/CocktailsNav';
+import CocktailsList from './components/CocktailsList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<RandomCocktails />} />
+          <Route path='cocktails' element={<CocktailsNav />}>
+            <Route path=':id' element={<CocktailsList />} />
+          </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -18,3 +18,63 @@ body {
   font-size: 1.25em;
   text-align: center;
 }
+
+/*Cocktails Nav Styling */
+
+.cocktails--container {
+  padding: 25px;
+}
+
+.cocktails--linksDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cocktails--links {
+  text-decoration: none;
+  font-weight: 600;
+  color: #55505c;
+}
+
+.cocktails--active {
+  text-decoration: underline;
+
+  font-weight: 600;
+  color: #55505c;
+}
+
+/* Cocktails List Styling */
+.cocktails--list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cocktails--item {
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.cocktails--image {
+  width: 125px;
+  border-radius: 5px;
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 1); */
+}
+
+.cocktails--title {
+  color: #55505c;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25em;
+}
