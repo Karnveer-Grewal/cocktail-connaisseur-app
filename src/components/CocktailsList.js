@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import CocktailsItem from './CocktailsItem';
 import axios from 'axios';
 
@@ -17,7 +17,6 @@ const CocktailsList = () => {
           `http://www.thecocktaildb.com/api/json/v1/1/search.php?f=${id}`,
           { signal: controller.signal }
         );
-        console.log('drinks', response.data.drinks);
         setCocktails(response.data.drinks);
       } catch (err) {
         console.log(err);
@@ -28,17 +27,22 @@ const CocktailsList = () => {
 
     return () => {
       controller.abort();
-      console.log('cleanedup');
     };
   }, [id]);
 
-  console.log('cocktails', cocktails);
+  console.log(cocktails);
 
   let cocktailsElements;
 
   if (cocktails) {
     cocktailsElements = cocktails.map((cocktail, index) => (
-      <CocktailsItem key={cocktail.idDrink} cocktail={cocktail} />
+      <Link
+        key={cocktail.idDrink}
+        to={`/cocktails/details/${cocktail.idDrink}`}
+        state={{ cocktail }}
+      >
+        <CocktailsItem cocktail={cocktail} />
+      </Link>
     ));
   } else {
     cocktailsElements = <h3>No cocktails start with this letter.</h3>;
