@@ -114,6 +114,8 @@ body {
   padding: 30px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   color: #55505c;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .details--heading {
@@ -158,4 +160,67 @@ body {
   margin: 10px;
   font-weight: 500;
   font-size: 1em;
+}
+
+/* Random Cocktail Styling */
+.random--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.random--container > h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #55505c;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.random--container > a {
+  text-decoration: none;
+  color: #55505c;
+}
+
+.random--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 50px 0px;
+}
+
+.random--info > img {
+  width: 75%;
+  border-radius: 5%;
+  margin-top: 20px;
+}
+
+.random--info > h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 0;
+}
+
+.random--subinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.random--subinfo > p {
+  text-align: center;
+  margin: 5px;
+  font-size: 1.1em;
+}
+
+.random--subinfo > p > span {
+  font-weight: 800;
 }
